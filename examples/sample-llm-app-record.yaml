@@ -1,0 +1,19 @@
+object_id: llmapp-001
+object_type: LLM App
+name: Support Copilot
+owner: teamlead@example.com
+deputy_owner: platform@example.com
+business_purpose: Assist internal support agents with drafting responses
+profile_type: LLM App
+autonomy_tier: 0
+impact_tier: 2
+data_sensitivity_class: internal
+tool_permissions:
+  - retrieval
+environment: stage
+version: 0.1.0
+lifecycle_state: Staged
+runtime_status: active
+trust_status: staged-review
+last_review_date: 2026-03-19
+recertification_due: 2026-06-19
