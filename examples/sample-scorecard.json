@@ -1,0 +1,39 @@
+{
+  "object_id": "agent-001",
+  "profile_type": "Agent",
+  "lifecycle_state": "Production",
+  "results": {
+    "pass": 6,
+    "partial": 1,
+    "fail": 2,
+    "not_applicable": 0
+  },
+  "posture_band": "Progressing",
+  "highest_severity": "High",
+  "top_findings": [
+    {
+      "id": "NET-001",
+      "severity": "High",
+      "result": "Fail",
+      "summary": "Network exposure review not completed"
+    },
+    {
+      "id": "FIN-001",
+      "severity": "High",
+      "result": "Fail",
+      "summary": "Cost guardrails not defined"
+    },
+    {
+      "id": "SIG-001",
+      "severity": "Medium",
+      "result": "Partial",
+      "summary": "Policy violation visibility is incomplete"
+    }
+  ],
+  "next_actions": [
+    "Complete a network exposure review",
+    "Define budget or token guardrails",
+    "Enable policy violation visibility"
+  ],
+  "next_review_date": "2026-06-19"
+}
