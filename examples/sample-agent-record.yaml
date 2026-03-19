@@ -1,0 +1,23 @@
+object_id: agent-001
+object_type: Agent
+name: OpenClaw Research Agent
+owner: alice@example.com
+deputy_owner: bob@example.com
+business_purpose: Research and summarize public technical documentation
+profile_type: Agent
+autonomy_tier: 2
+impact_tier: 2
+data_sensitivity_class: public-internal
+tool_permissions:
+  - web_search
+  - retrieval
+environment: test
+version: 0.1.0
+lifecycle_state: Test
+runtime_status: active
+trust_status: approved-for-test
+last_review_date: 2026-03-19
+recertification_due: 2026-06-19
+budget_guardrails:
+  daily_token_limit: 250000
+  monthly_budget_usd: 50
