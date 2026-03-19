@@ -1,0 +1,14 @@
+object_id: agent-001
+object_type: Agent
+profile_type: Agent
+lifecycle_state: Production
+checks:
+  owner_present: true
+  deputy_owner_present: true
+  tool_scope_declared: true
+  network_exposure_reviewed: false
+  secrets_handling_recorded: true
+  cost_guardrails_defined: false
+  monitoring_enabled: true
+  recertification_set: true
+  policy_violation_visibility: false
