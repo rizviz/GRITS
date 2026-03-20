@@ -23,8 +23,8 @@ This includes:
 ### What to read first
 
 - [QUICKSTART.md](QUICKSTART.md)
-- [baselines/openclaw-deployment-hardening-baseline-v0.1.md](baselines/openclaw-deployment-hardening-baseline-v0.1.md)
-- [profiles/agent-profile-v0.1.md](profiles/agent-profile-v0.1.md)
+- [baselines/openclaw-deployment-hardening-baseline.md](baselines/openclaw-deployment-hardening-baseline.md)
+- [profiles/agent-profile.md](profiles/agent-profile.md)
 
 ## 2. Teams planning to operate many agents over time
 
@@ -47,9 +47,9 @@ This includes:
 
 ### What to read first
 
-- [enterprise/agent-lifecycle-model-v0.1.md](enterprise/agent-lifecycle-model-v0.1.md)
-- [enterprise/agent-registry-schema-v0.1.md](enterprise/agent-registry-schema-v0.1.md)
-- [signals/runtime-signal-model-v0.1.md](signals/runtime-signal-model-v0.1.md)
+- [enterprise/agent-lifecycle-model.md](enterprise/agent-lifecycle-model.md)
+- [enterprise/agent-registry-schema.md](enterprise/agent-registry-schema.md)
+- [signals/runtime-signal-model.md](signals/runtime-signal-model.md)
 
 ## When GRITS is probably not the right first thing
 
@@ -58,7 +58,7 @@ GRITS is not the best first stop if you are looking only for:
 - a new runtime to run agents
 - a fully managed enterprise product
 - a formal certification regime
-- sector-specific legal/regulatory mapping out of the box
+- sector-specific legal or regulatory mapping out of the box
 
 ## Why GRITS tries to serve both groups
 

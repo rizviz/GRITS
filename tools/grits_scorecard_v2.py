@@ -12,7 +12,7 @@ CONTROL_MAP = {
     "cost_guardrails_defined": ("FIN-001", "High", "Cost guardrails defined"),
     "monitoring_enabled": ("SIG-001", "High", "Monitoring enabled"),
     "recertification_set": ("LIF-001", "High", "Recertification date set"),
-    "policy_violation_visibility": ("SIG-002", "Medium", "Policy violation visibility enabled")
+    "policy_violation_visibility": ("SIG-002", "Medium", "Policy violation visibility enabled"),
 }
 
 
@@ -47,12 +47,14 @@ def main() -> int:
             pass_count += 1
         else:
             fail_count += 1
-            findings.append({
-                "id": cid,
-                "severity": severity,
-                "result": "Fail",
-                "summary": summary
-            })
+            findings.append(
+                {
+                    "id": cid,
+                    "severity": severity,
+                    "result": "Fail",
+                    "summary": summary,
+                }
+            )
             if severity_rank[severity] > severity_rank[highest]:
                 highest = severity
 
@@ -64,12 +66,12 @@ def main() -> int:
             "pass": pass_count,
             "partial": 0,
             "fail": fail_count,
-            "not_applicable": 0
+            "not_applicable": 0,
         },
         "posture_band": posture_band(pass_count, len(CONTROL_MAP)),
         "highest_severity": highest,
         "top_findings": findings[:5],
-        "next_actions": [item["summary"] for item in findings[:3]]
+        "next_actions": [item["summary"] for item in findings[:3]],
     }
 
     print(json.dumps(result, indent=2))

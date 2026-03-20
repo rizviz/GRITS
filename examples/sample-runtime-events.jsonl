@@ -1,0 +1,3 @@
+{"event_id":"evt-001","event_type":"agent_registered","object_id":"agent-001","timestamp":"2026-03-19T18:00:00Z","environment":"test","severity":"Low"}
+{"event_id":"evt-002","event_type":"tool_invocation","object_id":"agent-001","timestamp":"2026-03-19T18:05:00Z","environment":"test","severity":"Low","actor":"agent-001"}
+{"event_id":"evt-003","event_type":"cost_threshold_exceeded","object_id":"agent-001","timestamp":"2026-03-19T18:08:00Z","environment":"test","severity":"High"}

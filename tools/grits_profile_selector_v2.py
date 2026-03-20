@@ -10,7 +10,7 @@ def classify_system(data: dict) -> str:
 
     if object_type == "agent":
         return "Agent"
-    if object_type == "llm app" or object_type == "llm_app":
+    if object_type in {"llm app", "llm_app", "llmapp"}:
         return "LLM App"
     if autonomy_tier > 0 or len(tools) > 1:
         return "Agent"

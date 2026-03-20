@@ -7,17 +7,17 @@ GRITS helps teams do two things without switching frameworks:
 1. secure and govern one deployment now
 2. govern agent fleets over time
 
-It is not another abstract AI policy framework. It is an implementation-first package of profiles, baselines, lifecycle rules, runtime signals, and assessment artifacts that teams can actually use.
+GRITS is not another abstract AI policy framework. It is an implementation-first package of profiles, baselines, lifecycle rules, runtime signals, and assessment artifacts that teams can actually use.
 
-## Why someone would use this
+## Who this is for
 
 | If you are... | You probably care about... | GRITS gives you... |
 |---|---|---|
-| running OpenClaw, NemoClaw, or similar agent runtimes | hardening quickly, reducing mistakes, seeing clear gaps | hardening baselines, remediation playbooks, scan/score/remediate workflow |
-| building agents or LLM apps | knowing what controls apply without bureaucracy | Agent Profile, LLM App Profile, secure default patterns, approval and evidence expectations |
-| leading platform, governance, or security at scale | ownership, lifecycle, drift, runtime monitoring, recertification | Agent Lifecycle Model, managed-object schema, runtime signal model, transition gates, scorecards |
+| running OpenClaw, NemoClaw, or similar agent runtimes | hardening quickly, reducing mistakes, seeing clear gaps | deployment baselines, remediation playbooks, secure defaults, scan/score/remediate workflow |
+| building agents or LLM apps | knowing what controls apply without bureaucracy | Agent Profile, LLM App Profile, ownership rules, lifecycle model, practical defaults |
+| leading platform, governance, or security at scale | ownership, lifecycle, drift, runtime monitoring, recertification | managed-object model, Agent Lifecycle Model, transition gates, runtime signal model, scorecards |
 
-## What you get in this repo today
+## What you get in this repo
 
 ### Adoption Engine track
 
@@ -25,7 +25,7 @@ Built for operators, builders, self-hosters, and small teams who need immediate 
 
 - OpenClaw deployment hardening baseline
 - OpenClaw remediation playbook
-- secure default presets for local dev, home lab, and always-on agents
+- secure default patterns for local dev, home lab, and always-on agents
 - starter tooling to classify, check, and score systems
 - sample profiles and examples
 
@@ -38,7 +38,7 @@ Built for teams planning to govern many agents over time.
 - ownership and accountability model
 - transition gates and recertification logic
 - runtime signal model and evidence requirements
-- assessment and scorecard model
+- scorecard model and severity mapping
 
 ## Start here
 
@@ -47,8 +47,8 @@ Built for teams planning to govern many agents over time.
 Read these first:
 
 1. [QUICKSTART.md](QUICKSTART.md)
-2. [baselines/openclaw-deployment-hardening-baseline-v0.1.md](baselines/openclaw-deployment-hardening-baseline-v0.1.md)
-3. [playbooks/openclaw-remediation-playbook-v0.1.md](playbooks/openclaw-remediation-playbook-v0.1.md)
+2. [baselines/openclaw-deployment-hardening-baseline.md](baselines/openclaw-deployment-hardening-baseline.md)
+3. [playbooks/openclaw-remediation-playbook.md](playbooks/openclaw-remediation-playbook.md)
 
 Then run:
 
@@ -62,51 +62,46 @@ python tools/grits_scorecard_v2.py examples/sample-openclaw-posture.yaml
 
 Read these first:
 
-1. [enterprise/agent-lifecycle-model-v0.1.md](enterprise/agent-lifecycle-model-v0.1.md)
-2. [enterprise/agent-registry-schema-v0.1.md](enterprise/agent-registry-schema-v0.1.md)
-3. [signals/runtime-signal-model-v0.1.md](signals/runtime-signal-model-v0.1.md)
-4. [assessment/scorecard-model-v0.1.md](assessment/scorecard-model-v0.1.md)
+1. [enterprise/agent-lifecycle-model.md](enterprise/agent-lifecycle-model.md)
+2. [enterprise/agent-registry-schema.md](enterprise/agent-registry-schema.md)
+3. [signals/runtime-signal-model.md](signals/runtime-signal-model.md)
+4. [assessment/scorecard-model.md](assessment/scorecard-model.md)
 
-## What GRITS is and is not
+## Why use GRITS
 
-GRITS is:
-
-- an open framework for lifecycle governance and runtime assurance
-- profile-driven and implementation-oriented
-- useful at point-agent scale and fleet scale
-- designed to work with broader frameworks rather than pretending they do not exist
-
-GRITS is not:
-
-- a new agent runtime
-- a full control plane product
-- a certification scheme in v0.1
-- only a hardening checklist
+| Outcome | Why it matters |
+|---|---|
+| Saves time | teams do not have to invent lifecycle governance and deployment baselines from scratch |
+| Accelerates development | builders know what controls apply without dragging in full enterprise bureaucracy |
+| Promotes trust | ownership, lifecycle state, review dates, and runtime signals are made explicit |
+| Improves security | hardening baselines and remediation playbooks reduce avoidable mistakes |
+| Reduces drift | recertification, runtime events, and transition gates make governance continuous |
+| Scales better | one agent and one thousand agents can be governed with the same framework language |
 
 ## Framework comparison, value first
 
-| Framework | Best used for | Where GRITS adds value | When GRITS is the faster starting point |
+| Framework | Best used for | Where GRITS adds value | When GRITS is the faster first move |
 |---|---|---|---|
-| ATF | Zero Trust governance for autonomous agents | adds profiles, baselines, lifecycle artifacts, runtime signals, and direct adoption artifacts | when builders/operators need something they can apply immediately to an existing runtime |
-| NIST AI RMF | broad enterprise AI risk management and governance alignment | translates high-level outcomes into deployable controls, baselines, evidence, and assessment artifacts | when a team needs an operational package, not just a governance umbrella |
-| OWASP agentic / GenAI guidance | risk identification, threat awareness, and mitigation categories | organizes those concerns into profiles, lifecycle governance, baselines, and scorecards | when a team wants one operational frame instead of separate guidance documents |
-| AAGATE | control-plane-oriented continuous governance for agentic AI | provides an open framework layer that can be used without adopting a full platform architecture | when the user needs a lightweight open framework before or instead of a larger platform build |
+| ATF | Zero Trust-style governance for autonomous agents | adds deployable baselines, lifecycle artifacts, runtime signals, and adoption-ready implementation guidance | when builders or operators need something they can apply immediately to an existing runtime |
+| NIST AI RMF | broad enterprise AI risk management alignment | translates high-level governance outcomes into deployable controls, baselines, evidence, and scorecards | when a team needs an operational package, not just a governance umbrella |
+| OWASP agentic or GenAI guidance | risk identification, threat awareness, and mitigation categories | organizes those concerns into profiles, lifecycle governance, baselines, runtime signals, and scorecards | when a team wants one operational frame instead of separate guidance documents |
+| AAGATE | platform-oriented continuous governance and control-plane thinking | provides an open framework layer that can be used without adopting a full platform architecture | when the goal is lightweight adoption, open artifacts, and runtime-agnostic structure |
 
-A longer comparison is in [docs/value-first-framework-comparison-v0.1.md](docs/value-first-framework-comparison-v0.1.md).
+A longer comparison is in [docs/comparisons.md](docs/comparisons.md).
 
 ## The GRITS structure in one view
 
 | Layer | What it does | Primary audience |
 |---|---|---|
-| Core | defines terms, object model, control logic, conformance concepts | everyone |
+| Core | defines terms, object model, lifecycle logic, control families, and conformance concepts | everyone |
 | Profiles | tells users what applies to their system type | builders and reviewers |
-| Baselines / Playbooks | shows how to deploy and remediate in real runtimes | operators and self-hosters |
-| Runtime Signals | defines continuous governance evidence and event vocabulary | platform and governance teams |
+| Baselines and playbooks | shows how to deploy and remediate in real runtimes | operators and self-hosters |
+| Runtime signals | defines continuous governance evidence and event vocabulary | platform and governance teams |
 | Assessment | turns evidence into findings and scorecards | security, governance, operators |
 
 ## Immediate release logic
 
-GRITS v0.1 intentionally ships both tracks together:
+GRITS ships both tracks together:
 
 - Adoption Engine proves GRITS is useful today
 - Enterprise Reference proves GRITS can scale beyond one host or one agent
@@ -123,20 +118,13 @@ baselines/    deployable minimum baselines
 playbooks/    remediation and operations playbooks
 signals/      runtime signal and evidence model
 assessment/   scorecards, findings, severity, remediation mapping
-adoption/     presets and quick-start workflows
 enterprise/   lifecycle, registry, ownership, transition, runtime assurance refs
 tools/        starter scripts
 examples/     sample records, posture files, events, and scorecards
-docs/         audience-facing overview, comparison, roadmap, FAQ
+docs/         audience-facing comparison, metadata, FAQ, roadmap
 ```
 
-## Who should read what first
-
-- OpenClaw / NemoClaw user: [WHO_IS_THIS_FOR.md](WHO_IS_THIS_FOR.md) -> [QUICKSTART.md](QUICKSTART.md) -> OpenClaw baseline
-- agent builder: [WHO_IS_THIS_FOR.md](WHO_IS_THIS_FOR.md) -> [profiles/agent-profile-v0.1.md](profiles/agent-profile-v0.1.md)
-- enterprise platform or governance lead: lifecycle model -> registry schema -> runtime signal model
-
-## Release boundaries for v0.1
+## Release boundaries
 
 Included now:
 
@@ -148,9 +136,9 @@ Included now:
 - scorecard model
 - starter scripts and examples
 
-Deferred beyond v0.1:
+Deferred beyond this starter package:
 
-- full control plane product design
+- full control-plane product design
 - sector overlays
 - deep agent-to-agent delegation trust model
 - automated multi-runtime discovery
@@ -158,9 +146,9 @@ Deferred beyond v0.1:
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md). The most valuable contributions for v0.1 are:
+See [CONTRIBUTING.md](CONTRIBUTING.md). The most valuable contributions are:
 
 - runtime-specific baselines
 - lifecycle edge cases
-- signal/event schema feedback
+- signal and event schema feedback
 - example scorecards and real remediation sequences

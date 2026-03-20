@@ -38,35 +38,35 @@ Expected result: a JSON scorecard with control results, severity, posture band, 
 
 ### 5. Use the baseline and playbook
 
-- baseline: [baselines/openclaw-deployment-hardening-baseline-v0.1.md](baselines/openclaw-deployment-hardening-baseline-v0.1.md)
-- remediation: [playbooks/openclaw-remediation-playbook-v0.1.md](playbooks/openclaw-remediation-playbook-v0.1.md)
+- baseline: [baselines/openclaw-deployment-hardening-baseline.md](baselines/openclaw-deployment-hardening-baseline.md)
+- remediation: [playbooks/openclaw-remediation-playbook.md](playbooks/openclaw-remediation-playbook.md)
 
 ## Option 2: Start the lifecycle governance track
 
 ### 1. Read the lifecycle model
 
-- [enterprise/agent-lifecycle-model-v0.1.md](enterprise/agent-lifecycle-model-v0.1.md)
+- [enterprise/agent-lifecycle-model.md](enterprise/agent-lifecycle-model.md)
 
 ### 2. Review the minimum agent record
 
-- [enterprise/agent-registry-schema-v0.1.md](enterprise/agent-registry-schema-v0.1.md)
+- [enterprise/agent-registry-schema.md](enterprise/agent-registry-schema.md)
 
 ### 3. Review the runtime signal model
 
-- [signals/runtime-signal-model-v0.1.md](signals/runtime-signal-model-v0.1.md)
+- [signals/runtime-signal-model.md](signals/runtime-signal-model.md)
 
 ### 4. Review score outputs
 
-- [assessment/scorecard-model-v0.1.md](assessment/scorecard-model-v0.1.md)
+- [assessment/scorecard-model.md](assessment/scorecard-model.md)
 - [examples/sample-scorecard.json](examples/sample-scorecard.json)
 
 ## Fast path by persona
 
 | Persona | First three files |
 |---|---|
-| self-hoster / OpenClaw user | QUICKSTART -> OpenClaw baseline -> OpenClaw remediation playbook |
+| self-hoster or OpenClaw user | QUICKSTART -> OpenClaw baseline -> OpenClaw remediation playbook |
 | agent builder | QUICKSTART -> Agent Profile -> secure default patterns |
-| governance / platform lead | QUICKSTART -> Agent Lifecycle Model -> registry schema |
+| governance or platform lead | QUICKSTART -> Agent Lifecycle Model -> registry schema |
 
 ## What success looks like after the first pass
 

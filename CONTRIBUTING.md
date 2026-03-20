@@ -2,13 +2,13 @@
 
 Thanks for helping improve GRITS.
 
-## Contribution priorities for v0.1
+## Contribution priorities
 
 The most useful contributions right now are:
 
 1. runtime baselines and playbooks grounded in real deployments
 2. lifecycle edge cases and governance failure modes
-3. signal/event schema feedback
+3. signal and event schema feedback
 4. example scorecards and remediation flows
 5. profile refinements that reduce ambiguity without adding bureaucracy
 
@@ -27,10 +27,10 @@ The most useful contributions right now are:
 | baseline | runtime-specific minimum control set |
 | playbook | remediation or operational sequence |
 | profile | tailored applicability guidance |
-| signal/event feedback | runtime event names, evidence payloads, drift triggers |
+| signal or event feedback | runtime event names, evidence payloads, drift triggers |
 | assessment example | scorecards, findings, remediation ordering |
 
-## What to avoid in v0.1
+## What to avoid
 
 - turning GRITS into a full product spec
 - overfitting to one runtime as if it were universal

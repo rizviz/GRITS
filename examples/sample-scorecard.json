@@ -4,8 +4,8 @@
   "lifecycle_state": "Production",
   "results": {
     "pass": 6,
-    "partial": 1,
-    "fail": 2,
+    "partial": 0,
+    "fail": 3,
     "not_applicable": 0
   },
   "posture_band": "Progressing",
@@ -24,9 +24,9 @@
       "summary": "Cost guardrails not defined"
     },
     {
-      "id": "SIG-001",
+      "id": "SIG-002",
       "severity": "Medium",
-      "result": "Partial",
+      "result": "Fail",
       "summary": "Policy violation visibility is incomplete"
     }
   ],
